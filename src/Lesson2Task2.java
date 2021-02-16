@@ -11,8 +11,5 @@ public class Lesson2Task2 {
             b = b + 3;
             System.out.print(array2[i] + " ");
         }
-
-        System.out.println(" ");
-        System.out.println("----------------------------------------");
     }
 }

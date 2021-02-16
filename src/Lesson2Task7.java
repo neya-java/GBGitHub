@@ -9,7 +9,7 @@
 public class Lesson2Task7 {
     public static void main(String[] args) {
         int [] array = {1, 2, 3, 4, 5, 6, 7, 8, 9 ,10, 11};
-        int step_shift = -5;
+        int step_shift = -17;
         shiftingTheArrayInIncrements(array, step_shift);
     }
 
@@ -20,6 +20,11 @@ public class Lesson2Task7 {
         }
         System.out.println("  ");
 
+        if (step_shift > 0 && step_shift > array.length || step_shift < 0 && step_shift < array.length) {
+            step_shift = step_shift % array.length;
+        }
+
+        System.out.println(step_shift);
         if (step_shift == 0) {
             System.out.println("Укажите сдвиг отличный о нуля!");
 
@@ -27,12 +32,12 @@ public class Lesson2Task7 {
             if (step_shift > 0) {
                 for (int number_of_shifts = 1; number_of_shifts <= step_shift; number_of_shifts++) {
                     /*вправо*/
-                    int wave_array_zero_element = array[array.length - 1];
+                    int wave_array_last_element = array[array.length - 1];
 
                     for (int i = 0; i < array.length - 1; i++) {
                         array[array.length - i - 1] = array[array.length - 2 - i];
                     }
-                    array[0] = wave_array_zero_element;
+                    array[0] = wave_array_last_element;
                 }
                 System.out.print("Массив со сдвигом " + step_shift + ":   ");
                 for (int i = 0; i < array.length; i++){

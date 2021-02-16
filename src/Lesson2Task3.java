@@ -18,8 +18,5 @@ public class Lesson2Task3 {
             }
             System.out.print(array3[i] + "    ");
         }
-
-        System.out.println(" ");
-        System.out.println("----------------------------------------");
     }
 }

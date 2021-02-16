@@ -20,7 +20,5 @@ public class Lesson2Task1 {
             }
             System.out.print(array1[i] + " ");
         }
-        System.out.println(" ");
-        System.out.println("----------------------------------------");
     }
 }

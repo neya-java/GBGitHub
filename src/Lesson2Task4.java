@@ -32,8 +32,5 @@ public class Lesson2Task4 {
             }
             System.out.println ();
         }
-
-        System.out.println(" ");
-        System.out.println("----------------------------------------");
     }
 }
