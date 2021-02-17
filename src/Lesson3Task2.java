@@ -1,8 +1,3 @@
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Random;
-import java.util.Scanner;
-
 /*2 * Создать массив из слов
 String[] words = {"apple", "orange", "lemon", "banana", "apricot", "avocado", "broccoli", "carrot",
 "cherry", "garlic", "grape", "melon", "leak", "kiwi", "mango", "mushroom", "nut", "olive", "pea",
@@ -17,6 +12,10 @@ ap############# (15 символов, чтобы пользователь не �
 carpet (ковер, не фрукт, но это всего лишь пример), будет выведено:
 ####e##########
 */
+
+import java.util.Random;
+import java.util.Scanner;
+
 public class Lesson3Task2 {
     public static void main(String[] args) {
         String [] words = {"apple", "orange", "lemon", "banana", "apricot", "avocado", "broccoli", "carrot",
@@ -41,7 +40,6 @@ public class Lesson3Task2 {
         String word_interred = sc.next();
         //System.out.println(word_interred);
 
-        int x = random_word.length();
         char[] word_char = {'#', '#', '#', '#', '#', '#', '#', '#', '#', '#', '#', '#', '#', '#', '#'};
         for (int i = 0; i < random_word.length(); i++) {
             word_char[i] = random_word.charAt(i);
@@ -68,4 +66,3 @@ public class Lesson3Task2 {
 
     }
 }
-
