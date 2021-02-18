@@ -40,8 +40,9 @@ public class Lesson3Task2 {
         String word_interred = sc.next();
         //System.out.println(word_interred);
 
-        char[] word_char = {'#', '#', '#', '#', '#', '#', '#', '#', '#', '#', '#', '#', '#', '#', '#'};
+        char[] word_char = new char [15]; //{'#', '#', '#', '#', '#', '#', '#', '#', '#', '#', '#', '#', '#', '#', '#'};
         for (int i = 0; i < random_word.length(); i++) {
+            word_char[i] = '#';
             word_char[i] = random_word.charAt(i);
         }
 
