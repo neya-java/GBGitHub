@@ -76,10 +76,10 @@ public class Employee {
 
         createAnEmployee1(human1);
 
-        Employee[] persArray = new Employee[5];
+        Employee[] person_array = new Employee[5];
 
-        createAnEmployee5(persArray);
+        createAnEmployee5(person_array);
 
-        ageOverForty(persArray);
+        ageOverForty(person_array);
     }
 }
