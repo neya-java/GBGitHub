@@ -117,54 +117,7 @@ public class Lesson4Task1 {
 //        return false ;
 //    }
 
-    /*public static boolean checkWin(char symb) {
-        int counter_for_the_number_of_chips_on_a_single_line = 0;
 
-        for (int i = 0; i < SIZE; i++) {
-            counter_for_the_number_of_chips_on_a_single_line = 0;
-            for (int j = 0; j < SIZE; j++) {
-                if (map[i][j] == symb) {
-                    counter_for_the_number_of_chips_on_a_single_line++;
-                }
-                if (counter_for_the_number_of_chips_on_a_single_line == DOT_TO_WIN) {
-                    return true;
-                }
-            }
-        }
-
-        for (int i = 0; i < SIZE; i++) {
-            counter_for_the_number_of_chips_on_a_single_line = 0;
-            for (int j = 0; j < SIZE; j++) {
-                if (map[j][i] == symb) {
-                    counter_for_the_number_of_chips_on_a_single_line++;
-                }
-                if (counter_for_the_number_of_chips_on_a_single_line == DOT_TO_WIN) {
-                    return true;
-                }
-            }
-        }
-
-        counter_for_the_number_of_chips_on_a_single_line = 0;
-        for (int i = 0; i< SIZE; i++) {
-            if (map[i][i] == symb) {
-                counter_for_the_number_of_chips_on_a_single_line++;
-            }
-            if (counter_for_the_number_of_chips_on_a_single_line == DOT_TO_WIN) {
-                return true;
-            }
-        }
-
-        counter_for_the_number_of_chips_on_a_single_line = 0;
-        for (int i = 0; i< SIZE; i++) {
-            if (map[i][SIZE-1-i] == symb) {
-                counter_for_the_number_of_chips_on_a_single_line++;
-            }
-            if (counter_for_the_number_of_chips_on_a_single_line == DOT_TO_WIN) {
-                return true;
-            }
-        }
-        return false;
-    }*/
 
     public static boolean checkWin(char symb) {
 
