@@ -8,26 +8,26 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-        int the_length_of_the_obstacle_cat_run;
-        int the_length_of_the_obstacle_cat_swim;
-        int the_length_of_the_obstacle_dog_run;
-        int the_length_of_the_obstacle_dog_swim;
+        int lengthObstacleCatRun;
+        int lengthObstacleCatSail;
+        int lengthObstacleDogRun;
+        int lengthObstacleDogSail;
 
         Scanner sc = new Scanner(System.in);
         System.out.println("Введите длинну припятствия бег кошка: ");
-        the_length_of_the_obstacle_cat_run = sc.nextInt();
+        lengthObstacleCatRun = sc.nextInt();
         System.out.println("Введите длинну припятствия плавание кошка: ");
-        the_length_of_the_obstacle_cat_swim = sc.nextInt();
+        lengthObstacleCatSail = sc.nextInt();
         System.out.println("Введите длинну припятствия бег сабакена: ");
-        the_length_of_the_obstacle_dog_run = sc.nextInt();
+        lengthObstacleDogRun = sc.nextInt();
         System.out.println("Введите длинну припятствия плавание сабакена: ");
-        the_length_of_the_obstacle_dog_swim = sc.nextInt();
+        lengthObstacleDogSail = sc.nextInt();
 
         Animal animal1 = new Animal("Чебурашка");
         animal1.infoAnimal();
         animal1.voice();
-        animal1.run();
-        animal1.swim();
+        animal1.toRun();
+        animal1.toSail();
         System.out.println("----------------------");
 
         Animal animal2 = new Animal("Гена");
@@ -38,26 +38,26 @@ public class Main {
         cat1.infoAnimal();
         cat1.infoCat();
         cat1.voice();
-        cat1.run();
-        cat1.swim();
-        cat1.run(the_length_of_the_obstacle_cat_run);
-        cat1.swim(the_length_of_the_obstacle_cat_swim);
+        cat1.toRun();
+        cat1.toSail();
+        cat1.toRun(lengthObstacleCatRun);
+        cat1.toSail(lengthObstacleCatSail);
         System.out.println("----------------------");
 
         Cat cat2 = new Cat("Вася");
         cat2.voice();
-        cat2.run(200);
+        cat2.toRun(200);
 
         Dog dog1 = new Dog("Мухтар");
         dog1.infoAnimal();
         dog1.infoDog();
         dog1.voice();
-        dog1.run(the_length_of_the_obstacle_dog_run);
-        dog1.swim(the_length_of_the_obstacle_dog_swim);
+        dog1.toRun(lengthObstacleDogRun);
+        dog1.toSail(lengthObstacleDogSail);
         System.out.println("----------------------");
 
-        System.out.println("Количество созданных животных: " + Animal.number_of_animal_created);
-        System.out.println("Количество созданных котов: " + Cat.number_of_cat_created);
-        System.out.println("Количество созданных собак: " + Dog.number_of_dogs_created);
+        System.out.println("Количество созданных животных: " + Animal.numberObjects);
+        System.out.println("Количество созданных котов: " + Cat.numberObjects);
+        System.out.println("Количество созданных собак: " + Dog.numberObjects);
     }
 }

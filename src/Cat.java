@@ -6,11 +6,11 @@
 
 public class Cat extends Animal {
 
-    static int number_of_cat_created;
+    static int numberObjects;
 
     public Cat(String name) {
         this.name = name;
-        number_of_cat_created++;
+        numberObjects++;
     }
 
     public void infoCat() {
@@ -22,16 +22,16 @@ public class Cat extends Animal {
         System.out.println("Кошка мяукает");
     }
 
-    public void run(int the_length_of_the_obstacle_cat_run) {
-        if (the_length_of_the_obstacle_cat_run <= 200) {
-            System.out.println("Кот(кошка) " + name + " пробежал(а) дистанцию в " + the_length_of_the_obstacle_cat_run + "м");
+    public void toRun(int lengthObstacleCatRun) {
+        if (lengthObstacleCatRun <= 200) {
+            System.out.println("Кот(кошка) " + name + " пробежал(а) дистанцию в " + lengthObstacleCatRun + "м");
         } else {
             System.out.println("Кошка " + name + "не умеет бегать на дистанцию более 200м.");
         }
     }
 
-    public void swim(int the_length_of_the_obstacle_cat_swim) {
-        if (the_length_of_the_obstacle_cat_swim == 0){
+    public void toSail(int lengthObstacleCatSail) {
+        if (lengthObstacleCatSail == 0){
             System.out.println( "Коту(кошке) " + name + " задано нулевая дистанция для плавания. Ему(ей) повезло, т.к. он(она) не умеет плавать");
         } else {
             System.out.println("Коту(кошке) задана не нулевая дистанция для плавания. " + name + " не умеет плавать и утонул(а).");

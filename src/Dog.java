@@ -6,11 +6,11 @@
 
 public class Dog extends Animal{
 
-    static int number_of_dogs_created;
+    static int numberObjects;
 
     public Dog(String name) {
         this.name = name;
-        number_of_dogs_created++;
+        numberObjects++;
     }
 
     void infoDog() {
@@ -22,17 +22,17 @@ public class Dog extends Animal{
         System.out.println("Собака гавкает");
     }
 
-    public void run(int the_length_of_the_obstacle_dog_run) {
-        if (the_length_of_the_obstacle_dog_run <= 500) {
-            System.out.println("Эта псинка " + name + " на изи пробежала " + the_length_of_the_obstacle_dog_run + "метров");
+    public void toRun(int lengthObstacleDogRun) {
+        if (lengthObstacleDogRun <= 500) {
+            System.out.println("Эта псинка " + name + " на изи пробежала " + lengthObstacleDogRun + "метров");
         } else {
             System.out.println("Эта собачка " + name + " не бегает дистанции больше 500м: " );
         }
     }
 
-    public void swim(int the_length_of_the_obstacle_dog_swim) {
-        if (the_length_of_the_obstacle_dog_swim <= 10) {
-            System.out.println("Эта псинка " + name + " на изи проплыла " + the_length_of_the_obstacle_dog_swim + "метров");
+    public void toSail(int lengthObstacleDogSail) {
+        if (lengthObstacleDogSail <= 10) {
+            System.out.println("Эта псинка " + name + " на изи проплыла " + lengthObstacleDogSail + "метров");
         } else {
             System.out.println("Эта собачка " + name + " не плавает дистанции больше 10м и утонула");
         }

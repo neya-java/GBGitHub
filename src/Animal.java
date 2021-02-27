@@ -6,11 +6,11 @@
 
 public class Animal {
 
-    static int number_of_animal_created;
+    static int numberObjects;
     String name;
 
     public  Animal() {
-        number_of_animal_created++;
+        numberObjects++;
     }
 
     public  Animal(String name) {
@@ -25,11 +25,11 @@ public class Animal {
         System.out.println("Животные издают звуки");
     }
 
-    public void run() {
+    public void toRun() {
         System.out.println("Животное " + name + " - может бежать");
     }
 
-    public void swim() {
+    public void toSail() {
         System.out.println("Животное " + name + " - может плыть");
     }
 }
