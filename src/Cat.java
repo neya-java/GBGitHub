@@ -26,15 +26,17 @@ public class Cat extends Animal {
         if (lengthObstacleCatRun <= 200) {
             System.out.println("Кот(кошка) " + name + " пробежал(а) дистанцию в " + lengthObstacleCatRun + "м");
         } else {
-            System.out.println("Кошка " + name + "не умеет бегать на дистанцию более 200м.");
+            System.out.println("Кошка " + name + " не умеет бегать на дистанцию более 200м.");
         }
     }
 
     public void toSail(int lengthObstacleCatSail) {
         if (lengthObstacleCatSail == 0){
-            System.out.println( "Коту(кошке) " + name + " задано нулевая дистанция для плавания. Ему(ей) повезло, т.к. он(она) не умеет плавать");
+            System.out.println( "Коту(кошке) " + name + " задано нулевая дистанция для плавания. " +
+                    "Ему(ей) повезло, т.к. он(она) не умеет плавать");
         } else {
-            System.out.println("Коту(кошке) задана не нулевая дистанция для плавания. " + name + " не умеет плавать и утонул(а).");
+            System.out.println("Коту(кошке) задана не нулевая дистанция для плавания. " + name +
+                    " не умеет плавать и утонул(а).");
         }
     }
 }
