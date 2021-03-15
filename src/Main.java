@@ -5,7 +5,6 @@ public class Main {
                 new Human("Сергей", 600, 6),
                 new Cat("Вася", 100, 3),
                 new Robot("Железяка", 250, 1)
-
         };
 
         IObstacles[] arrayObstacles = {
