@@ -1,13 +1,21 @@
+import contestants.Cat;
+import contestants.Contestants;
+import contestants.Human;
+import contestants.Robot;
+import obstacles.Obstacles;
+import obstacles.Treadmill;
+import obstacles.Wall;
+
 public class Main {
     public static void main(String[] args) {
 
-        IRunAndJump[] arrayParticipants = {
+        Contestants[] contestants = {
                 new Human("Сергей", 600, 6),
                 new Cat("Вася", 100, 3),
                 new Robot("Железяка", 250, 1)
         };
 
-        IObstacles[] arrayObstacles = {
+        Obstacles[] obstacles = {
                 new Treadmill(100),
                 new Wall(1),
                 new Treadmill(200),
@@ -20,16 +28,14 @@ public class Main {
                 new Wall(5),
         };
 
-        for (IRunAndJump participants : arrayParticipants) {
-            int i = 1;
+        for (Contestants contestant : contestants) {
             System.out.println(" ");
-            for (IObstacles obstacles : arrayObstacles) {
-                /*obstacles.goOrJump(participants);*/
-                System.out.print("Препятствие №" + i + ": ");
-                if (!obstacles.goOrJump(participants)) {
+            /*for(Obstacles obstacle : obstacles)*/
+            for (int i = 0; i < obstacles.length; i++) {
+                System.out.print("Препятствие №" + (i+1) + ": ");
+                if (!obstacles[i].Action(contestant)) {
                     break;
                 }
-                i++;
             }
         }
     }
