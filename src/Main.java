@@ -1,10 +1,5 @@
-import contestants.Cat;
-import contestants.Contestants;
-import contestants.Human;
-import contestants.Robot;
-import obstacles.Obstacles;
-import obstacles.Treadmill;
-import obstacles.Wall;
+import contestants.*;
+import obstacles.*;
 
 public class Main {
     public static void main(String[] args) {

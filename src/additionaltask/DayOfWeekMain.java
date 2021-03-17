@@ -2,9 +2,9 @@ package additionaltask;
 
 public class DayOfWeekMain {
     public static void main(String[] args) {
-        System.out.println("Сегодня: "+ DayOfWeek.SUNDAY);
+        System.out.println("Сегодня: "+ DayOfWeek.TUESDAY);
         System.out.print("Осталось рабочих часов: ");
-        System.out.println(getWorkingHours(DayOfWeek.SUNDAY));
+        System.out.println(getWorkingHours(DayOfWeek.TUESDAY));
     }
 
     static int getWorkingHours(DayOfWeek day){

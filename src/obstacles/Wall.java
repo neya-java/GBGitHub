@@ -3,7 +3,7 @@ package obstacles;
 import contestants.Contestants;
 
 public class Wall implements Obstacles {
-    private int heightWall;
+    private final int heightWall;
 
     public Wall(int heightWall) {
         this.heightWall = heightWall;
