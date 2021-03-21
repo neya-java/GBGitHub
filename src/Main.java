@@ -1,42 +1,44 @@
 public class Main {
     public static void main(String[] args) {
-        String [][] arr4To4 = {
+        String[][] arr4To4 = {
                 {"2", "8", "9", "4"},
                 {"1", "8", "9", "4"},
-                {"1", "8", "9", "4"},
-                {"1", "8", "9", "p"}
+                {"1", "8", "%", "4"},
+                {"1", "8", "9", "5"},
+//                {"1", "8", "9", "5"}
         };
-
-        summArray(arr4To4);
+        try {
+            System.out.println(sumArray (arr4To4));
+        } catch (MyArraysSizeException | MyArrayDataException e) {
+            e.printStackTrace();
+        }
     }
 
     /**
      * вычисляет сумму чесел массива
-     * @param arr4To4 должнен быть 4 на 4 и числовой.
+     * @param arr4To4 должнен быть размером 4x4 и содержать целые числа.
      * Иначе MyArraysSizeException или MyArrayDataException(i, j)
      **/
-    public static void summArray(String [][] arr4To4) {
-        int summArray = 0;
+    public static int sumArray(String[][] arr4To4) throws MyArraysSizeException, MyArrayDataException {
+        int sumArray = 0;
         if (arr4To4.length != 4) {
-            throw new MyArraysSizeException();
+            throw new MyArraysSizeException("Массив не 4 на 4. Число строк: " + arr4To4.length);
         } else {
             for (int i = 0; i < arr4To4.length; i++) {
                 for (int j = 0; j < arr4To4.length; j++) {
-
                     if (arr4To4[i].length != 4) {
-                        throw new MyArraysSizeException();
+                        throw new MyArraysSizeException("Массив не 4 на 4. Не корректная длинна стороки №: " + i);
                     } else {
                         try {
-
-                            summArray += Integer.parseInt(arr4To4[i][j]);
+                            sumArray += Integer.parseInt(arr4To4[i][j]);
                         } catch (NumberFormatException e) {
-                            throw new MyArrayDataException("Не число в ячейке: " +i + " " + j , i,j);
+                            throw new MyArrayDataException("Не число в ячейке: " +i + " " + j);
                         }
                     }
                 }
             }
         }
-        System.out.println(summArray);
+        return sumArray;
     }
 }
 
