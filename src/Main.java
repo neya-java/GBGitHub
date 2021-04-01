@@ -1,4 +1,3 @@
-import java.security.Signature;
 import java.util.Arrays;
 
 public class Main{
@@ -9,7 +8,7 @@ public class Main{
         final int HALF = SIZE / 2;
 
         // Для дальнейшего сравнения массивом
-        float[] arrCalc1 = arrayCalc1(SIZE,HALF);
+        float[] arrCalc1 = arrayCalc1(SIZE);
         float[] arrCalc2 = arrayCalc2(SIZE,HALF);
         float[] arrCalc2Test = arrayCalc2Test(SIZE,HALF);
 
@@ -17,7 +16,7 @@ public class Main{
         System.out.println("arrayCalc1 equals arrayCalc2Test ? : " + Arrays.equals(arrCalc1, arrCalc2Test));
     }
 
-    public static float[] arrayCalc1(int SIZE, int HALF){
+    public static float[] arrayCalc1(int SIZE){
         float[] arr1 = new float[SIZE];
         for (int i = 0; i < SIZE ; i++) {
             arr1[i] = 1;
